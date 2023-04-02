@@ -1,10 +1,16 @@
 const http = require("http");
 const mongoose = require("mongoose");
 const Post = require("./models/post");
+const dotenv = require("dotenv");
+dotenv.config({ path: "./config.env" });
 
-mongoose
-  .connect("mongodb://127.0.0.1:27017/testPost")
-  .then(() => console.log("資料庫連接成功"));
+const db = process.env.DATABASE.replace(
+  "<password>",
+  process.env.DATABASE_PASSWORD
+);
+console.log(db);
+
+mongoose.connect(db).then(() => console.log("資料庫連接成功"));
 
 const requestListener = async (req, res) => {
   //   console.log("req.url:" + req.url);
