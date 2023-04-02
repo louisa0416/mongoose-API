@@ -1,0 +1,18 @@
+{
+  "name": "mongooseapi",
+  "version": "1.0.0",
+  "description": "mongooseapi 部屬到Render",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node.js",
+    "Render"
+  ],
+  "author": "Louisa",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^7.0.3"
+  }
+}
